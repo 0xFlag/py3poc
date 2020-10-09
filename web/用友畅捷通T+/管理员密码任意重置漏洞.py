@@ -16,7 +16,7 @@ data = json.dumps({"pwdNew":"21232f297a57a5a743894a0e4a801fc3"})
 
 def write(u):
 	f=open("vuln.txt","a+")
-	f.write(u)
+	f.write(u+"\n")
 	f.close()
 
 def post_url(u):
